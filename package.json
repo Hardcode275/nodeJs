@@ -1,0 +1,30 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hardcode275/nodeJs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "hr"
+  ],
+  "author": "HR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hardcode275/nodeJs/issues"
+  },
+  "homepage": "https://github.com/Hardcode275/nodeJs#readme",
+  "dependencies": {
+    "picocolors": "1.1.1",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  }
+}

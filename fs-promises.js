@@ -20,4 +20,3 @@ fs.readFile('./archivo2.txt', 'utf-8',)
 }
 
 )
-
