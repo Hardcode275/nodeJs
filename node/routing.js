@@ -22,7 +22,20 @@ const processRequest = (req, res) => {
         case 'POST':
             switch (url){
                 case '/pokemon':{
-                    const body = ''
+                    let body = ''
+                   
+                    // escuchar el evento de data
+                    req.on('data', chunk => {
+                        body += chunk.toString()
+                    })
+                    // un chunk es un fragmento de la informacion que se envia
+                    req.on('end', ()=>{
+                        const data = JSON.parse(body)
+                        //llamar a la base de datos para obtener la info.
+                        res.writeHead(201, {'Content-Type': 'application/json; charset=utf-8'}) // 201 se utiliza o se entiende es cuando ya se a guardado el recurso
+                        res.end(JSON.stringify(data))                           
+                    })
+
                     break;
                 }
 
