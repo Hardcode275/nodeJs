@@ -1,6 +1,38 @@
 const http = require('node:http')
 
+//commonsJS -> modulos clasicos de node si funconan los json directamente.
+const dittoJSON = require('./pokemon/ditto.json')
+
 const processRequest = (req, res) => {
+    const {method, url} = req
+
+    switch(method){
+        case 'GET':
+            switch(url){
+                case '/pokemon/ditto':
+                    res.setHeader('Content-Type', 'application/json ; charset=utf-8' )
+                    return res.end(JSON.stringify(dittoJSON)) // se utiliza JSON.stringify para convertir un objeto a un string, pero es necesario esto no solo se puede pasar el json en si 
+                default:
+                    res.statusCode = 404
+                    res.setHeader('Content-Type', 'text/html; charset=utf-8')
+                    return res.end('Not found')
+            }
+        
+
+        case 'POST':
+            switch (url){
+                case '/pokemon':{
+                    const body = ''
+                    break;
+                }
+
+                default:
+                    res.statusCode = 404
+                    res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+                    return res.end('404 Not found')
+            }  
+
+    }
 
 }
 
