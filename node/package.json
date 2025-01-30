@@ -5,12 +5,16 @@
   "main": "http.js",
   "scripts": {
     "dev:1": "nodemon http.js",
-    "dev:2": "nodemon routing.js"
+    "dev:2": "nodemon routing.js",
+    "dev:3": "node --watch express.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "4.21.2"
   }
 }

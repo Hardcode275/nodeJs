@@ -33,6 +33,7 @@ const processRequest = (req, res) => {
                         const data = JSON.parse(body)
                         //llamar a la base de datos para obtener la info.
                         res.writeHead(201, {'Content-Type': 'application/json; charset=utf-8'}) // 201 se utiliza o se entiende es cuando ya se a guardado el recurso
+                        data.timestamp = Date.now()
                         res.end(JSON.stringify(data))                           
                     })
 
